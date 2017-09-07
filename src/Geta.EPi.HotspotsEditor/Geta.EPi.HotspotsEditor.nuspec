@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Geta.EPi.HotspotsEditor</id>
+    <version>$version$</version>
+    <authors>Geta</authors>
+    <owners>Geta</owners>
+    <projectUrl>https://github.com/Geta/???</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Geta.EPi.Hotspotseditor is a package that lets you create hotspots, on images.</description>
+    <tags>Geta EPiServer Hotspots</tags>
+  </metadata>
+  <files>
+    <file src="bin\Geta.EPi.HotspotsEditor.dll" target="lib\net45\" />
+    <file src="bin\Geta.EPi.HotspotsEditor.zip" target="content\modules\_protected\Geta.EPi.HotspotsEditor\" />
+    <file src="readme.txt" target="" />
+  </files>
+</package>

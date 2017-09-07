@@ -1,0 +1,24 @@
+﻿<div class="hotspotseditor-wrapper">
+    <div class="hotspotseditor">
+        <input type="hidden" class="value" data-dojo-attach-point="hotspots" />
+
+        <div class="epi-gadgetInnerToolbar">
+            <div class="toolbar">
+                <span class="new hotspot" title="@Model.NewHotSpotText">New</span>
+                <span class="trash" title="@Model.DeleteHotSpotText">
+                    <span class="icon epi-iconTrash"></span>
+                    Drag here to delete
+                </span>
+                <span class="link-to-product hidden">
+                    <span class="icon epi-iconReferences"></span>
+                    Link to product
+                    <span class="control hidden" data-dojo-attach-point="linkToProduct"></span>
+                </span>
+            </div>
+        </div>
+        <div class="image-container">
+            <div class="hotspots"></div>
+            <div class="image"><img src="${_currentContext.previewUrl}" style="max-width: 100%;" /></div>
+        </div>
+    </div>
+</div>

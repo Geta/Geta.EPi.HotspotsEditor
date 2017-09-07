@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geta.EPi.HotspotsEditor", "src\Geta.EPi.HotspotsEditor\Geta.EPi.HotspotsEditor.csproj", "{B36AD6E0-93DD-40FA-8824-42074001E393}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{73A036AB-8C4D-41B9-9FEB-1CDC1CB5AE3E}"
+	ProjectSection(SolutionItems) = preProject
+		build\Geta.EPi.HotspotsEditor.proj = build\Geta.EPi.HotspotsEditor.proj
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B36AD6E0-93DD-40FA-8824-42074001E393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B36AD6E0-93DD-40FA-8824-42074001E393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B36AD6E0-93DD-40FA-8824-42074001E393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B36AD6E0-93DD-40FA-8824-42074001E393}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F0CCC06-F0D0-4D28-B1D3-640ECC9EA69F}
+	EndGlobalSection
+EndGlobal
