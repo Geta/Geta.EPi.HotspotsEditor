@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.Serialization.Formatters;
 using EPiServer.Core;
 using Newtonsoft.Json;
 
@@ -22,10 +21,7 @@ namespace Geta.EPi.HotspotsEditor.Cms.Properties
 
                 try
                 {
-                    _value = JsonConvert.DeserializeObject<T>(str, new JsonSerializerSettings
-                    {
-                        TypeNameHandling = TypeNameHandling.Objects
-                    });
+                    _value = JsonConvert.DeserializeObject<T>(str);
                 }
                 catch (Exception)
                 {
@@ -42,11 +38,7 @@ namespace Geta.EPi.HotspotsEditor.Cms.Properties
 
                     try
                     {
-                        base.Value = JsonConvert.SerializeObject(value, new JsonSerializerSettings
-                        {
-                            TypeNameHandling = TypeNameHandling.Objects,
-                            TypeNameAssemblyFormat = FormatterAssemblyStyle.Simple
-                        });
+                        base.Value = JsonConvert.SerializeObject(value);
                     }
                     catch (Exception)
                     {
