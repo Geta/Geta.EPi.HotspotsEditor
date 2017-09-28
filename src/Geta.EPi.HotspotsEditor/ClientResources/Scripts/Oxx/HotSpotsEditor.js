@@ -253,7 +253,7 @@
 
 			// parse the JSON data if the value is invalid
             var hotSpots = [];
-            if (typeof(value) === 'object') {
+            if (value && typeof(value) === 'object') {
                 hotSpots = value;
             } else {
                 try {
