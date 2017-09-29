@@ -247,27 +247,32 @@
 		    var value = this.getValue();
 
 			// check if there is something to do
-			if(typeof(value) === 'undefined' || value === '')  {
+			if(typeof(value) === 'undefined' || value === '') {
 				return;
 			}
 
 			// parse the JSON data if the value is invalid
             var hotSpots = [];
-            if (value && typeof(value) === 'object') {
-                hotSpots = value;
-            } else {
-                try {
-                    hotSpots = JSON.parse(this._$value.val());
-                } catch (ex) {
-                    window.console && window.console.warn(ex);
-                    hotSpots = [];
+
+            if (value) {
+                if (typeof (value) === 'object') {
+                    hotSpots = value;
+                }
+                else {
+                    try {
+                        var parsed = JSON.parse(this._$value.val());
+                        hotSpots = parsed;
+                    }
+                    catch (ex) {
+                        window.console && window.console.warn(ex);
+                    }
                 }
             }
-
-			if(hotSpots.length > 0) {
+            
+            if (hotSpots.length > 0)
+            {
 				var imageWidth = this._$image.width(),
 					imageHeight = this._$image.height();
-
 
 				for(var i = 0; i < hotSpots.length; i++) {
 					var hotSpotData = hotSpots[i],

@@ -1,10 +1,10 @@
-﻿using EPiServer.Shell.ObjectEditing.EditorDescriptors;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using EPiServer.Shell.ObjectEditing.EditorDescriptors;
 using Geta.EPi.HotspotsEditor.Cms.Models;
 
 namespace Geta.EPi.HotspotsEditor.Cms.EditorDescriptors
 {
-    [EditorDescriptorRegistration(TargetType = typeof(List<HotSpotContainer>), UIHint = UIHint.HotspotsEditor)]
+    [EditorDescriptorRegistration(TargetType = typeof(IEnumerable<HotSpotContainer>), UIHint = UIHint.HotspotsEditor)]
     public class HotspotsEditorDescriptor : EditorDescriptor
     {
         public HotspotsEditorDescriptor()
