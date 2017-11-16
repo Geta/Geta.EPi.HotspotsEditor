@@ -1,7 +1,9 @@
+using System.Web.UI.WebControls;
 using EPiServer;
 using EPiServer.Commerce.Catalog.ContentTypes;
 using EPiServer.Core;
 using EPiServer.ServiceLocation;
+using Newtonsoft.Json;
 
 namespace Geta.EPi.HotspotsEditor.Cms.Models
 {
@@ -29,6 +31,7 @@ namespace Geta.EPi.HotspotsEditor.Cms.Models
             }
         }
 
+        [JsonIgnore]
         public EntryContentBase IndexedProduct
         {
             get
@@ -40,6 +43,7 @@ namespace Geta.EPi.HotspotsEditor.Cms.Models
             }
         }
 
+        [JsonIgnore]
         public string ProductCode
         {
             get
@@ -53,10 +57,10 @@ namespace Geta.EPi.HotspotsEditor.Cms.Models
             }
         }
 
-        public HotSpot hotSpot { get; set; }
-        public HotSpotArea Area { get; set; }
+        public Rectangle HotSpot { get; set; }
+        public FRectangle Area { get; set; }
 
-        public class HotSpot
+        public class Rectangle
         {
             public decimal Top { get; set; }
             public decimal Left { get; set; }
@@ -64,7 +68,7 @@ namespace Geta.EPi.HotspotsEditor.Cms.Models
             public int Height { get; set; }
         }
 
-        public class HotSpotArea
+        public class FRectangle
         {
             public decimal Top { get; set; }
             public decimal Left { get; set; }
