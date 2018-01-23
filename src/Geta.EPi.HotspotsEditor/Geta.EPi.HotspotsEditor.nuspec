@@ -5,10 +5,14 @@
     <version>$version$</version>
     <authors>Geta</authors>
     <owners>Geta</owners>
-    <projectUrl>https://github.com/Geta/???</projectUrl>
+    <projectUrl>https://github.com/Geta/Geta.EPi.HotspotsEditor</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Geta.EPi.Hotspotseditor is a package that lets you create hotspots, on images.</description>
     <tags>Geta EPiServer Hotspots</tags>
+	<dependencies>
+      <dependency id="EPiServer.CMS.Core" version="[10.10.3, 11)" />
+      <dependency id="EPiServer.Commerce.Core" version="[11.2.0, 12)" />
+    </dependencies>
   </metadata>
   <files>
     <file src="bin\Geta.EPi.HotspotsEditor.dll" target="lib\net45\" />
