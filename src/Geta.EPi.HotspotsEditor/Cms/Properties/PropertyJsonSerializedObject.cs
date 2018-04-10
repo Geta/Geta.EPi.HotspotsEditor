@@ -56,11 +56,5 @@ namespace Geta.EPi.HotspotsEditor.Cms.Properties
         {
             return LongString;
         }
-
-        [Obsolete("Use IPropertyControlFactory to create property controls")]
-        public override IPropertyControl CreatePropertyControl()
-        {
-            return null;
-        }
     }
 }

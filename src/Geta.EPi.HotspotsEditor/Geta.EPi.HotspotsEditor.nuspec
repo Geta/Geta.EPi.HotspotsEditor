@@ -9,6 +9,10 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Geta.EPi.Hotspotseditor is a package that lets you create hotspots, on images.</description>
     <tags>Geta EPiServer Hotspots</tags>
+    <dependencies>
+      <dependency id="EPiServer.Commerce.Core" version="[11.5.0, 12)" />
+      <dependency id="Newtonsoft.Json" version="[9.0.1, 10)" />
+    </dependencies>
   </metadata>
   <files>
     <file src="bin\Geta.EPi.HotspotsEditor.dll" target="lib\net45\" />
