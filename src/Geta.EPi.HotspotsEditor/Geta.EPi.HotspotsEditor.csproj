@@ -251,6 +251,7 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="web.config.transform" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ClientResources\Images\Hotspots\hotspot.en.png" />

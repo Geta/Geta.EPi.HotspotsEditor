@@ -12,7 +12,7 @@
     <dependencies>
       <dependency id="EPiServer.CMS.Core" version="[11.4.0,12)" />
       <dependency id="EPiServer.CMS.UI.Core" version="[11.1.0,12)" />
-      <dependency id="EPiServer.Commerce.Core" version="[12.0,13)" />
+      <dependency id="EPiServer.Commerce.Core" version="[12,13)" />
       <dependency id="System.Security.Cryptography.Xml" version="[4.4.2,5)" />
     </dependencies>
   </metadata>
@@ -20,5 +20,6 @@
     <file src="bin\Geta.EPi.HotspotsEditor.dll" target="lib\net45\" />
     <file src="bin\Geta.EPi.HotspotsEditor.zip" target="content\modules\_protected\Geta.EPi.HotspotsEditor\" />
     <file src="readme.txt" target="" />
+    <file src="web.config.transform" target="content" />
   </files>
 </package>
