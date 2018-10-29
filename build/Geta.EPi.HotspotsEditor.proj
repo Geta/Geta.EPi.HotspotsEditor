@@ -88,7 +88,6 @@
         </NugetCommand>
 
       </PropertyGroup>
-      <Exec Command="$(NugetCommand)"/>
 
       <!-- Cleanup -->
       <RemoveDir Directories="$(TmpOutDir)" />
