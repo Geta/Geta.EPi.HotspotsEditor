@@ -30,3 +30,6 @@ public class ImageFile : ImageData
 ```
 The hotspot editor should now be visible on a tab named 'Hotspots' when editing 'All properties' on an image inside EPiServer edit mode.
 The hotspot data saved during edit is then persisted into the property defined above.
+
+## Changelog
+[Changelog](CHANGELOG.md)
