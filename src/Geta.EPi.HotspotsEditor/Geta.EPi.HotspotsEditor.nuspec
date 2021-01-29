@@ -9,6 +9,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Geta.EPi.Hotspotseditor is a package that lets you create hotspots, on images.</description>
     <tags>Geta EPiServer Hotspots</tags>
+    <repository type="git" url="URL" branch="BRANCH_NAME" commit="COMMIT" />
     <dependencies>
       <dependency id="EPiServer.CMS.Core" version="[11.11.1,12)" />
       <dependency id="EPiServer.CMS.UI.Core" version="[11.1.0,12)" />
