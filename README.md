@@ -1,4 +1,8 @@
 # Geta.EPi.HotspotsEditor
+
+* Master<br>
+![](http://tc.geta.no/app/rest/builds/buildType:(id:GetaPackages_EPiHotspotsEditor_00ci),branch:master/statusIcon)
+
 An editor for image hotspots.
 
 ## Installation
