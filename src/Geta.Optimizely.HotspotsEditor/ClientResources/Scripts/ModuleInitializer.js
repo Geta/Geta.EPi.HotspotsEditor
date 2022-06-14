@@ -22,7 +22,7 @@
 
         _getRestPath: function (name) {
 
-            return routes.getRestPath({ moduleArea: 'Geta.EPi.HotspotsEditor', storeName: name });
+            return routes.getRestPath({ moduleArea: 'Geta.Optimizely.HotspotsEditor', storeName: name });
         }
     });
 });

@@ -1,4 +1,4 @@
-﻿namespace Geta.EPi.HotspotsEditor.Cms
+﻿namespace Geta.Optimizely.HotspotsEditor.Cms
 {
     public static class UIHint
     {

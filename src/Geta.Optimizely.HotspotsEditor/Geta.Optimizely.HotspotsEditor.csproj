@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <PackageId>Geta.Optimizely.HotspotsEditor</PackageId>
+    <Title>An editor for image hotspots</Title>
+    <Authors>Geta Digital</Authors>
+    <Company>Geta Digital</Company>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl>https://cdn.geta.no/opensource/icons/Geta-logo-3.png</PackageIconUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Description>An editor for image hotspots.</Description>
+    <PackageTags>Geta Optimizely Hotspots Editor</PackageTags>
+    <RepositoryType>Git</RepositoryType>
+    <RepositoryUrl>https://github.com/Geta/Geta.Optimizely.HotspotsEditor</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPiServer.CMS.UI" Version="[12.4.0,13.0)" />
+    <PackageReference Include="EPiServer.CMS.UI.Core" Version="[12.4.0,13.0)" />
+    <PackageReference Include="EPiServer.Commerce" Version="[14.3.1,15.0)" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+  </PropertyGroup>
+  
+  <ImportGroup>
+    <Import Project="$(SolutionDir)\src\pack.proj" Condition="Exists('$(SolutionDir)\src\pack.proj')" />
+  </ImportGroup>
+
+  <ItemGroup>
+    <Content Include=".\msbuild\CopyZipFiles.targets">
+      <Pack>true</Pack>
+      <PackagePath>build\$(TargetFramework)\$(MSBuildProjectName).targets</PackagePath>
+    </Content>
+  </ItemGroup>
+</Project>

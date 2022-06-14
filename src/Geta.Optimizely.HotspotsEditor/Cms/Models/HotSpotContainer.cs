@@ -1,26 +1,25 @@
-using System.Web.UI.WebControls;
 using EPiServer;
 using EPiServer.Commerce.Catalog.ContentTypes;
 using EPiServer.Core;
 using EPiServer.ServiceLocation;
 using Newtonsoft.Json;
 
-namespace Geta.EPi.HotspotsEditor.Cms.Models
+namespace Geta.Optimizely.HotspotsEditor.Cms.Models
 {
     public class HotSpotContainer
     {
         private readonly IContentLoader _contentLoader;
-        private IContent _content;
+        private IContent? _content;
 
         public HotSpotContainer() : this(ServiceLocator.Current.GetInstance<IContentLoader>())
-        {}
+        { }
 
         public HotSpotContainer(IContentLoader contentLoader)
         {
             _contentLoader = contentLoader;
         }
 
-        public string Link { get; set; }
+        public string? Link { get; set; }
 
         private void LoadContent()
         {
@@ -35,7 +34,7 @@ namespace Geta.EPi.HotspotsEditor.Cms.Models
         public EntryContentBase IndexedProduct
         {
             get
-            {                
+            {
                 ContentReference.TryParse(Link, out ContentReference contentReference);
                 _contentLoader.TryGet(contentReference, out EntryContentBase entryBase);
 
@@ -57,8 +56,8 @@ namespace Geta.EPi.HotspotsEditor.Cms.Models
             }
         }
 
-        public Rectangle HotSpot { get; set; }
-        public FRectangle Area { get; set; }
+        public Rectangle? HotSpot { get; set; }
+        public FRectangle? Area { get; set; }
 
         public class Rectangle
         {

@@ -2,15 +2,15 @@
 using EPiServer.Core;
 using Newtonsoft.Json;
 
-namespace Geta.EPi.HotspotsEditor.Cms.Properties
+namespace Geta.Optimizely.HotspotsEditor.Cms.Properties
 {
     public abstract class PropertyJsonSerializedObject<T> : PropertyLongString where T : class
     {
-        protected T _value;
+        protected T? _value;
 
         public override Type PropertyValueType => typeof(T);
 
-        public override object Value
+        public override object? Value
         {
             get
             {
@@ -25,7 +25,7 @@ namespace Geta.EPi.HotspotsEditor.Cms.Properties
                 }
                 catch (Exception)
                 {
-                    _value = default(T);
+                    _value = default;
                 }
 
                 return _value;
@@ -34,7 +34,7 @@ namespace Geta.EPi.HotspotsEditor.Cms.Properties
             {
                 if (value is T)
                 {
-                    _value = default(T);
+                    _value = default;
 
                     try
                     {
