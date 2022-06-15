@@ -1,5 +1,4 @@
-**/modules
-!sandbox/**/modules/_protected/Geta.Optimizely.GenericLinks
+**/Geta.Optimizely.HotspotsEditor/modules
 
 .npm-cache/
 
