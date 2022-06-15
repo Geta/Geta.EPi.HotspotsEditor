@@ -6,15 +6,15 @@
     "epi-cms/_ContentContextMixin",
     "epi-cms/widget/ContentSelector",
     "epi/i18n!epi/cms/nls/geta.clientresources.hotspotseditor",
-    "epi/i18n!epi/cms/nls/Commerce.productlinkmceplugin.productlinkproperties",
+    "epi/i18n!epi/cms/nls/shell.cms.externallinks.details",
     'dojo/text!./Templates/HotspotsEditor.html'
-], function (declare, lang, _WidgetBase, _TemplatedMixin, _ContentContextMixin, ContentSelector, localizations, commerceResources, template) {
+], function (declare, lang, _WidgetBase, _TemplatedMixin, _ContentContextMixin, ContentSelector, localizations, externallinksResources, template) {
 
     return declare("hotspots/editors/HotspotsEditor",
         [_WidgetBase, _TemplatedMixin, _ContentContextMixin], {
             templateString: template,
 
-            _resources: lang.mixin(localizations, commerceResources),
+            _resources: lang.mixin(localizations, externallinksResources),
 
             //********************************************************************************
             //*PROTOTYPE/PUBLIC FUNCTIONS*****************************************************
@@ -66,10 +66,10 @@
                 this.productSelector = new ContentSelector({
                     value: value,
                     cultureSpecific: false,
-                    allowedTypes: ["episerver.core.icontentdata"],
-                    roots: ["-1073741823__CatalogContent"],
-                    label: this._resources.address,
-                    allowedDndTypes: ["episerver.core.icontentdata.reference"]
+                    allowedTypes: this.allowedTypes != null ? this.allowedTypes : ["episerver.core.icontentdata"],
+                    roots: this.roots != null ? this.roots : ["-1073741823__CatalogContent"],
+                    label: this._resources.content,
+                    allowedDndTypes: this.allowedDndTypes != null ? this.allowedDndTypes : ["episerver.core.icontentdata.reference"]
                 });
 
                 $(this.linkToProduct).append(this.productSelector.domNode);
@@ -103,7 +103,6 @@
             */
             _onChange: function (event) {
                 var value = event.target.getValue();
-                //window.console.log('change event: ', this.value !== value, this.value, value);
                 if (this.value !== value) {
 
                     // this will trigger the save event on object, giving the option to publish the content

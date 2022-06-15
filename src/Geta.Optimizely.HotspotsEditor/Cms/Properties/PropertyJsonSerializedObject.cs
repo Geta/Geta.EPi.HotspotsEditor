@@ -16,8 +16,7 @@ namespace Geta.Optimizely.HotspotsEditor.Cms.Properties
             {
                 if (_value != null) return _value;
 
-                var str = base.Value as string;
-                if (str == null) return default(T);
+                if (base.Value is not string str) return default(T);
 
                 try
                 {

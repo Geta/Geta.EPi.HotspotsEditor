@@ -1,5 +1,4 @@
 using EPiServer;
-using EPiServer.Commerce.Catalog.ContentTypes;
 using EPiServer.Core;
 using EPiServer.ServiceLocation;
 using Newtonsoft.Json;
@@ -21,38 +20,16 @@ namespace Geta.Optimizely.HotspotsEditor.Cms.Models
 
         public string? Link { get; set; }
 
-        private void LoadContent()
-        {
-            if (!string.IsNullOrEmpty(Link) && _content == null)
-            {
-                ContentReference.TryParse(Link, out ContentReference contentReference);
-                _contentLoader.TryGet(contentReference, out _content);
-            }
-        }
-
         [JsonIgnore]
-        public EntryContentBase IndexedProduct
+        public IContent? Content
         {
             get
             {
-                ContentReference.TryParse(Link, out ContentReference contentReference);
-                _contentLoader.TryGet(contentReference, out EntryContentBase entryBase);
-
-                return entryBase;
-            }
-        }
-
-        [JsonIgnore]
-        public string ProductCode
-        {
-            get
-            {
-                ContentReference.TryParse(Link, out ContentReference contentReference);
-                _contentLoader.TryGet(contentReference, out EntryContentBase product);
-
-                if (product == null) return string.Empty;
-
-                return product.Code;
+                if (_content == null && !string.IsNullOrEmpty(Link) && _content == null && ContentReference.TryParse(Link, out ContentReference contentReference))
+                {
+                    _contentLoader.TryGet(contentReference, out _content);
+                }
+                return _content;
             }
         }
 
