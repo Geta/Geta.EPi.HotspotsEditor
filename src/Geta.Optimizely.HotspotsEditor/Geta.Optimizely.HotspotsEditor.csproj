@@ -35,8 +35,9 @@
 
   <ItemGroup>
     <None Include="..\..\resources\icon.png" Pack="true" PackagePath="\" />
+    <EmbeddedResource Include="lang\**" />
   </ItemGroup>
-
+  
   <ItemGroup>
     <Content Include=".\msbuild\CopyZipFiles.targets">
       <Pack>true</Pack>

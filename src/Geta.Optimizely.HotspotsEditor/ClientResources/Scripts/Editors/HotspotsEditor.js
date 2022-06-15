@@ -1,15 +1,20 @@
 ﻿define([
     "dojo/_base/declare",
+    "dojo/_base/lang",
     "dijit/_WidgetBase",
     "dijit/_TemplatedMixin",
     "epi-cms/_ContentContextMixin",
     "epi-cms/widget/ContentSelector",
+    "epi/i18n!epi/cms/nls/geta.clientresources.hotspotseditor",
+    "epi/i18n!epi/cms/nls/Commerce.productlinkmceplugin.productlinkproperties",
     'dojo/text!./Templates/HotspotsEditor.html'
-], function (declare, _WidgetBase, _TemplatedMixin, _ContentContextMixin, ContentSelector, template) {
+], function (declare, lang, _WidgetBase, _TemplatedMixin, _ContentContextMixin, ContentSelector, localizations, commerceResources, template) {
 
     return declare("hotspots/editors/HotspotsEditor",
         [_WidgetBase, _TemplatedMixin, _ContentContextMixin], {
             templateString: template,
+
+            _resources: lang.mixin(localizations, commerceResources),
 
             //********************************************************************************
             //*PROTOTYPE/PUBLIC FUNCTIONS*****************************************************
@@ -63,7 +68,7 @@
                     cultureSpecific: false,
                     allowedTypes: ["episerver.core.icontentdata"],
                     roots: ["-1073741823__CatalogContent"],
-                    label: 'Select product',
+                    label: this._resources.address,
                     allowedDndTypes: ["episerver.core.icontentdata.reference"]
                 });
 
