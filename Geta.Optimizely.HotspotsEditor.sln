@@ -9,9 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		CHANGELOG.md = CHANGELOG.md
 		NuGet.config = NuGet.config
-		src\pack.proj = src\pack.proj
-		README.md = README.md
 		pack.ps1 = pack.ps1
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
