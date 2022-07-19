@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<configuration>
-  <episerver.shell>
-    <protectedModules>
-      <add name="Geta.EPi.HotspotsEditor" />
-    </protectedModules>
-  </episerver.shell>
-</configuration>
