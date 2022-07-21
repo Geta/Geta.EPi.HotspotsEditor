@@ -1,7 +1,8 @@
 # Geta.EPi.HotspotsEditor
 
-* Master<br>
 ![](http://tc.geta.no/app/rest/builds/buildType:(id:GetaPackages_EPiHotspotsEditor_00ci),branch:master/statusIcon)
+
+**For ASP.NET 6+ and Episerver/Optimizely 12+ see: https://github.com/Geta/geta-optimizely-hotspotseditor**
 
 An editor for image hotspots.
 
