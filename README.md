@@ -36,5 +36,11 @@ public class ImageFile : ImageData
 The hotspot editor should now be visible on a tab named 'Hotspots' when editing 'All properties' on an image inside EPiServer edit mode.
 The hotspot data saved during edit is then persisted into the property defined above.
 
+If you want to link to other content than the default of Commerce you can specify content like the following.
+'''
+    [Roots(RootSelection.StartPage | RootSelection.CommerceRootPage)]
+    [Types(typeof(PageData), typeof(ProductContent))]
+''''
+
 ## Changelog
 [Changelog](CHANGELOG.md)
